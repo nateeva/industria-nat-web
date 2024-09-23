@@ -3,9 +3,9 @@ export const Logo = ({url, className, ...props}) => {
   return (
     <a href={url}  >
       <img
-        src="/images/logotipo_marron.svg"
+        src="/src/assets/images/logotipo-marron.png"
         alt="Logotipo Industria Natural"
-        className={`w-28 ${className}`}
+        className={`w-24 ${className}`}
       />
     </a>
   )
