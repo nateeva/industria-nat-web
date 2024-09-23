@@ -244,6 +244,32 @@ const ModalNuevoProducto = ({ open, handleClose, refrescarProductos }) => {
               />
             </div>
 
+            <div className="justify-start gap-4 mt-4 md:hidden">
+                <Button className="w-full mb-2 md:mb-0 bg-gris-50 hover:bg-gris-100"
+                  onClick={(e) => {
+                    // Reiniciar el formulario y las propiedades
+                    setDtosForm({
+                      nombre: '',
+                      tamanio: '',
+                      precio: '',
+                      descripcion: ''
+                    });
+                    setDtosProp([]);
+
+                    // Cerrar el modal
+                    handleClose();
+                  }}>
+                  Cancelar
+                </Button>
+
+                <Button className="w-full bg-verde-100 hover:bg-verde-200"
+                  onClick={(e) => {
+                    handleGuardarProdNuevo();
+                  }}
+                >Guardar
+                </Button>
+              </div>
+
           </div>
         </Box>
       </Modal>

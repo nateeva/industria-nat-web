@@ -151,7 +151,7 @@ const ModalEditProducto = ({ open, handleClose, producto, refrescarProductos }) 
             <Icon
               onClick={handleClose}
               icon={<IoCloseSharp size={24}
-              className="-mt-8" />} />
+                className="-mt-8" />} />
           </div>
           <div className="justify-between gap-8 md:flex">
             <div className='w-full mt-4 md:mt-0'>
@@ -240,6 +240,20 @@ const ModalEditProducto = ({ open, handleClose, producto, refrescarProductos }) 
                 className="w-full px-3 py-2 border border-gray-300 rounded" />
             </div>
 
+            <div className="justify-start gap-4 mt-4 md:hidden">
+              <Button className="w-full mb-2 md:mb-0 bg-gris-50 hover:bg-gris-100"
+                onClick={(e) => {
+                  handleClose()
+                }}
+              >Cancelar
+              </Button>
+
+              <Button className="w-full bg-verde-100 hover:bg-verde-200" onClick={(e) => {
+                handleGuardarEditDtos();
+              }}
+              >Guardar
+              </Button>
+            </div>
           </div>
         </Box>
       </Modal>
