@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter";
+  background-color: #F5F1E6;
+}
+
+.bg-banner {
+  background-image: url('../images/product_index_2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #838282;
+}
+
+/* desk */
+@media (min-width: 1024px) {
+
+  .bg-tienda {
+    background-image: url('/images/bg_recurso_grafico.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 80px -5px;
+
+  }
+
+  .bg-about {
+    background-image: url('/images/bg_textura_right.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+
+  }
+}
+
+/* En tu archivo CSS o en un bloque de estilos globales */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: end;
+  margin-top: 0.5rem;
+}
+
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #574D4B;
+}
+
+.active .page-link {
+  font-weight: bold;
+}
+
+.previous, .next, .break {
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+
+  .pagination{
+    justify-content: center;
+  }
+}
+
